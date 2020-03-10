@@ -529,12 +529,38 @@ for character in string {
 for i in closedRange {
     print(i)
 }
-// WHILE LOOP
+// WHILE LOOP: be careful when use this While method cause it can cause infinite loop
 
-var now = Date().timeIntervalSince1970
-let oneSecondFromNow = now + 1
+//var now = Date().timeIntervalSince1970
+//let oneSecondFromNow = now + 1
+//
+//while now < oneSecondFromNow {
+//    now = Date().timeIntervalSince1970
+//    print("waiting...")
+//}
 
-while now < oneSecondFromNow {
-    now = Date().timeIntervalSince1970
-    print("waiting...")
+
+// Difference between Instance Property vs Type Property and Instance Method vs Type Method
+// we only need to use keyword "static" to turn a Instance Properties/Methods into Type Properties/Methods
+// We can apply these concepts in both struct and class 
+struct Structure {
+    let instanceProperty = "An Instance Property"
+    static let typeProperty = "A Type Property"
+    
+    func instanceMethod(){
+        print("I am an Instance Method")
+    }
+    static func typeMethod() {
+        print("I am a Type Method")
+    }
+    
 }
+// need to create a new object to call the instance properties/methods
+let myStructure = Structure()
+print(myStructure.instanceProperty)
+myStructure.instanceMethod()
+
+
+// just call the Type Property using dot operator
+print(Structure.typeProperty)
+Structure.typeMethod()

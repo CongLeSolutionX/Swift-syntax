@@ -56,8 +56,8 @@ provides-top-level:
 - "string"
 - "halfOpenRange"
 - "closedRange"
-- "now"
-- "oneSecondFromNow"
+- "Structure"
+- "myStructure"
 provides-nominal:
 - "11Assignment18VehiclesP"
 - "11Assignment18AircraftC"
@@ -65,6 +65,7 @@ provides-nominal:
 - "11Assignment17AirportO"
 - "11Assignment17TrafficO"
 - "11Assignment16PersonV"
+- "11Assignment19StructureV"
 provides-member:
 - ["11Assignment18VehiclesP", ""]
 - ["11Assignment18AircraftC", ""]
@@ -72,13 +73,13 @@ provides-member:
 - ["11Assignment17AirportO", ""]
 - ["11Assignment17TrafficO", ""]
 - ["11Assignment16PersonV", ""]
+- ["11Assignment19StructureV", ""]
 - ["11Assignment18VehiclesP", "moving"]
 - ["11Assignment13CarV", "running"]
 - ["11Assignment16PersonV", "age"]
 provides-dynamic-lookup:
 depends-top-level:
 - "&&"
-- "+"
 - "..."
 - "..<"
 - "<"
@@ -94,7 +95,6 @@ depends-top-level:
 - "Car"
 - "CastingPrecedence"
 - "Character"
-- "Date"
 - "Double"
 - "ExtendedGraphemeClusterType"
 - "Float"
@@ -105,6 +105,7 @@ depends-top-level:
 - "Set"
 - "String"
 - "StringLiteralType"
+- "Structure"
 - "TernaryPrecedence"
 - "Traffic"
 - "UnicodeScalarType"
@@ -140,10 +141,9 @@ depends-top-level:
 - "intNum"
 - "letterExplicit"
 - "myState"
+- "myStructure"
 - "names"
-- "now"
 - "numbers"
-- "oneSecondFromNow"
 - "optionalCar"
 - "person"
 - "potentialString"
@@ -253,7 +253,6 @@ depends-member:
 - ["Sl", "removeSubrange"]
 - ["Sl", "subscript"]
 - ["SL", "init"]
-- ["SL", "timeIntervalSince1970"]
 - ["10Foundation15ContiguousBytesP", "append"]
 - ["10Foundation15ContiguousBytesP", "contains"]
 - ["10Foundation15ContiguousBytesP", "count"]
@@ -282,7 +281,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "removeLast"]
 - ["s28CustomDebugStringConvertibleP", "removeSubrange"]
 - ["s28CustomDebugStringConvertibleP", "subscript"]
-- ["s28CustomDebugStringConvertibleP", "timeIntervalSince1970"]
 - ["s17CustomReflectableP", "append"]
 - ["s17CustomReflectableP", "contains"]
 - ["s17CustomReflectableP", "count"]
@@ -297,7 +295,6 @@ depends-member:
 - ["s17CustomReflectableP", "removeLast"]
 - ["s17CustomReflectableP", "removeSubrange"]
 - ["s17CustomReflectableP", "subscript"]
-- ["s17CustomReflectableP", "timeIntervalSince1970"]
 - ["s23CustomStringConvertibleP", "append"]
 - ["s23CustomStringConvertibleP", "appendInterpolation"]
 - ["s23CustomStringConvertibleP", "appendLiteral"]
@@ -314,7 +311,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "removeLast"]
 - ["s23CustomStringConvertibleP", "removeSubrange"]
 - ["s23CustomStringConvertibleP", "subscript"]
-- ["s23CustomStringConvertibleP", "timeIntervalSince1970"]
 - ["10Foundation12DataProtocolP", "append"]
 - ["10Foundation12DataProtocolP", "contains"]
 - ["10Foundation12DataProtocolP", "count"]
@@ -329,8 +325,6 @@ depends-member:
 - ["10Foundation12DataProtocolP", "removeLast"]
 - ["10Foundation12DataProtocolP", "removeSubrange"]
 - ["10Foundation12DataProtocolP", "subscript"]
-- ["10Foundation4DateV", "init"]
-- ["10Foundation4DateV", "timeIntervalSince1970"]
 - ["Se", "append"]
 - ["Se", "contains"]
 - ["Se", "count"]
@@ -345,7 +339,6 @@ depends-member:
 - ["Se", "removeLast"]
 - ["Se", "removeSubrange"]
 - ["Se", "subscript"]
-- ["Se", "timeIntervalSince1970"]
 - ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - ["s26DefaultStringInterpolationV", "appendLiteral"]
 - ["SD", "subscript"]
@@ -363,7 +356,6 @@ depends-member:
 - ["SE", "removeLast"]
 - ["SE", "removeSubrange"]
 - ["SE", "subscript"]
-- ["SE", "timeIntervalSince1970"]
 - ["SQ", "=="]
 - ["SQ", "RawValue"]
 - ["SQ", ""]
@@ -387,7 +379,6 @@ depends-member:
 - ["SQ", "removeLast"]
 - ["SQ", "removeSubrange"]
 - ["SQ", "subscript"]
-- ["SQ", "timeIntervalSince1970"]
 - ["s25ExpressibleByArrayLiteralP", "append"]
 - ["s25ExpressibleByArrayLiteralP", "contains"]
 - ["s25ExpressibleByArrayLiteralP", "count"]
@@ -428,7 +419,6 @@ depends-member:
 - ["SH", "removeLast"]
 - ["SH", "removeSubrange"]
 - ["SH", "subscript"]
-- ["SH", "timeIntervalSince1970"]
 - ["Si", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
@@ -506,8 +496,6 @@ depends-member:
 - ["SY", "hashValue"]
 - ["SY", "init"]
 - ["SY", "rawValue"]
-- ["10Foundation20ReferenceConvertibleP", "init"]
-- ["10Foundation20ReferenceConvertibleP", "timeIntervalSince1970"]
 - ["s10SIMDScalarP", "init"]
 - ["ST", "append"]
 - ["ST", "contains"]
@@ -530,6 +518,12 @@ depends-member:
 - ["Sx", "init"]
 - ["s27StringInterpolationProtocolP", "appendInterpolation"]
 - ["s27StringInterpolationProtocolP", "appendLiteral"]
+- ["11Assignment19StructureV", "init"]
+- ["11Assignment19StructureV", "instanceMethod"]
+- ["11Assignment19StructureV", "instanceProperty"]
+- !private ["11Assignment19StructureV", "print"]
+- ["11Assignment19StructureV", "typeMethod"]
+- ["11Assignment19StructureV", "typeProperty"]
 - ["s16TextOutputStreamP", "appendInterpolation"]
 - ["s16TextOutputStreamP", "appendLiteral"]
 - ["11Assignment17TrafficO", "Aircraft"]
@@ -560,7 +554,6 @@ depends-member:
 - ["s14_ArrayProtocolP", "removeSubrange"]
 - ["s14_ArrayProtocolP", "subscript"]
 - ["s30_CustomPlaygroundQuickLookableP", "init"]
-- ["s30_CustomPlaygroundQuickLookableP", "timeIntervalSince1970"]
 - ["s24_DestructorSafeContainerP", "append"]
 - ["s24_DestructorSafeContainerP", "contains"]
 - ["s24_DestructorSafeContainerP", "count"]
@@ -618,7 +611,6 @@ depends-member:
 - ["s21_ObjectiveCBridgeableP", "removeLast"]
 - ["s21_ObjectiveCBridgeableP", "removeSubrange"]
 - ["s21_ObjectiveCBridgeableP", "subscript"]
-- ["s21_ObjectiveCBridgeableP", "timeIntervalSince1970"]
 depends-nominal:
 - "s18AdditiveArithmeticP"
 - "11Assignment18AircraftC"
@@ -635,7 +627,6 @@ depends-nominal:
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "10Foundation12DataProtocolP"
-- "10Foundation4DateV"
 - "Se"
 - "s26DefaultStringInterpolationV"
 - "SD"
@@ -656,7 +647,6 @@ depends-nominal:
 - "Sk"
 - "Sm"
 - "SY"
-- "10Foundation20ReferenceConvertibleP"
 - "s10SIMDScalarP"
 - "ST"
 - "Sh"
@@ -665,6 +655,7 @@ depends-nominal:
 - "s13SignedNumericP"
 - "Sx"
 - "s27StringInterpolationProtocolP"
+- "11Assignment19StructureV"
 - "s16TextOutputStreamP"
 - "11Assignment17TrafficO"
 - "11Assignment18VehiclesP"
@@ -1963,4 +1954,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "d71166377e400e2e942432b773931318"
+interface-hash: "3ddfdd1e585dbd4c8d1fad200dd2d610"
