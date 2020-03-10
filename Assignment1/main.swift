@@ -480,3 +480,61 @@ let person = (name: "Ajay", age: 34)
  content compression resistance 
  
  */
+
+
+// FOR LOOP
+// using For lopp to print out all the values of an array
+let names = ["Anna", "Alex", "Brian", "Jack"]
+for name in names {
+    print("Hello\(name)!")
+}
+
+// working with range in For loop
+for number in 1...5 {
+    print("Hello, \(number)")
+}
+// not usingthe value of each element in the for loop, then
+for _ in 1...5{
+    print("hello")
+}
+
+
+let fruits = ["Apple", "Pear", "Orange"]
+let contacts = ["Adam": 123456789, "James": 987654321, "Amy": 912376128]
+let string = "Wassup"
+let halfOpenRange = 1..<5
+let closedRange = 1...5
+
+// print content of an array
+for fruit in fruits {
+    print(fruit)
+}
+// print the content of dictionary
+for person in contacts {
+    print("\(person.key),\(person.value)")
+}
+
+// print the half range, not included 5
+for number in halfOpenRange {
+    print(number)
+}
+
+// print out each character of the string
+for character in string {
+    print(character)
+}
+
+
+// print closedRange, included 5
+for i in closedRange {
+    print(i)
+}
+// WHILE LOOP
+
+var now = Date().timeIntervalSince1970
+let oneSecondFromNow = now + 1
+
+while now < oneSecondFromNow {
+    now = Date().timeIntervalSince1970
+    print("waiting...")
+}
