@@ -629,3 +629,26 @@ if let fish = neighbours[1] as? Fish {
     print("Casting has failed.")
 }
 
+/* Any, AnyObject, NSObject
+ - Any: can be any objects, literally
+ - AnyObject: can be objcts derived from classes, not from structs
+ - NSObject: are Foundation objects like NSString, NSNumber, NSData, NSDate, JSONSerialization, DateFormatter, FileManager,etc,
+*/
+struct Fruits{
+    func growOnTree(){
+        print("Fruit can grow on trees")
+    }
+}
+
+let num = 12
+let fruit = Fruits()
+
+let nsNum: NSNumber = 20
+let nsString: NSString = "abc"
+
+let anyNeighbours: [Any] = [cong, jack, nemo, num, fruit]
+
+let anyNeighbours2: [AnyObject] = [cong, jack, nemo]
+
+
+let nsNEighbours: [NSObject] = [nsNum, nsString]

@@ -66,6 +66,14 @@ provides-top-level:
 - "nemo"
 - "neighbours"
 - "findNemo"
+- "Fruits"
+- "num"
+- "fruit"
+- "nsNum"
+- "nsString"
+- "anyNeighbours"
+- "anyNeighbours2"
+- "nsNEighbours"
 provides-nominal:
 - "11Assignment18VehiclesP"
 - "11Assignment18AircraftC"
@@ -77,6 +85,7 @@ provides-nominal:
 - "11Assignment16AnimalC"
 - "11Assignment15HumanC"
 - "11Assignment14FishC"
+- "11Assignment16FruitsV"
 provides-member:
 - ["11Assignment18VehiclesP", ""]
 - ["11Assignment18AircraftC", ""]
@@ -88,6 +97,7 @@ provides-member:
 - ["11Assignment16AnimalC", ""]
 - ["11Assignment15HumanC", ""]
 - ["11Assignment14FishC", ""]
+- ["11Assignment16FruitsV", ""]
 - ["11Assignment18VehiclesP", "moving"]
 - ["11Assignment13CarV", "running"]
 - ["11Assignment16PersonV", "age"]
@@ -103,6 +113,7 @@ depends-top-level:
 - "Aircraft"
 - "Airport"
 - "Animal"
+- "AnyObject"
 - "Array"
 - "AssignmentPrecedence"
 - "Bool"
@@ -115,9 +126,13 @@ depends-top-level:
 - "Fish"
 - "Float"
 - "FloatLiteralType"
+- "Fruits"
 - "Human"
 - "Int"
 - "IntegerLiteralType"
+- "NSNumber"
+- "NSObject"
+- "NSString"
 - "Person"
 - "Set"
 - "String"
@@ -130,6 +145,8 @@ depends-top-level:
 - !private "_findStringSwitchCase"
 - "answer"
 - "answerExplicit"
+- "anyNeighbours"
+- "anyNeighbours2"
 - "assumedString"
 - "carBrands"
 - "carType"
@@ -151,6 +168,7 @@ depends-top-level:
 - "findNemo"
 - "floatNum"
 - "forcedString"
+- "fruit"
 - "fruits"
 - "halfOpenRange"
 - "hatchback"
@@ -165,6 +183,10 @@ depends-top-level:
 - "names"
 - "neighbours"
 - "nemo"
+- "nsNEighbours"
+- "nsNum"
+- "nsString"
+- "num"
 - "numbers"
 - "optionalCar"
 - "person"
@@ -428,6 +450,9 @@ depends-member:
 - ["11Assignment14FishC", "init"]
 - !private ["11Assignment14FishC", "print"]
 - ["s17FixedWidthIntegerP", "init"]
+- ["11Assignment16FruitsV", "growOnTree"]
+- ["11Assignment16FruitsV", "init"]
+- !private ["11Assignment16FruitsV", "print"]
 - ["SH", "=="]
 - ["SH", "RawValue"]
 - ["SH", ""]
@@ -673,6 +698,7 @@ depends-nominal:
 - "s27ExpressibleByIntegerLiteralP"
 - "11Assignment14FishC"
 - "s17FixedWidthIntegerP"
+- "11Assignment16FruitsV"
 - "SH"
 - "11Assignment15HumanC"
 - "Si"
@@ -1992,4 +2018,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "0cc3d8b46e92479fba8eee0432fe7421"
+interface-hash: "a14ab659ea3f49f88336af501242d959"
