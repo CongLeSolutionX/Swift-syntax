@@ -58,6 +58,14 @@ provides-top-level:
 - "closedRange"
 - "Structure"
 - "myStructure"
+- "Animal"
+- "Human"
+- "Fish"
+- "cong"
+- "jack"
+- "nemo"
+- "neighbours"
+- "findNemo"
 provides-nominal:
 - "11Assignment18VehiclesP"
 - "11Assignment18AircraftC"
@@ -66,6 +74,9 @@ provides-nominal:
 - "11Assignment17TrafficO"
 - "11Assignment16PersonV"
 - "11Assignment19StructureV"
+- "11Assignment16AnimalC"
+- "11Assignment15HumanC"
+- "11Assignment14FishC"
 provides-member:
 - ["11Assignment18VehiclesP", ""]
 - ["11Assignment18AircraftC", ""]
@@ -74,6 +85,9 @@ provides-member:
 - ["11Assignment17TrafficO", ""]
 - ["11Assignment16PersonV", ""]
 - ["11Assignment19StructureV", ""]
+- ["11Assignment16AnimalC", ""]
+- ["11Assignment15HumanC", ""]
+- ["11Assignment14FishC", ""]
 - ["11Assignment18VehiclesP", "moving"]
 - ["11Assignment13CarV", "running"]
 - ["11Assignment16PersonV", "age"]
@@ -88,6 +102,7 @@ depends-top-level:
 - "??"
 - "Aircraft"
 - "Airport"
+- "Animal"
 - "Array"
 - "AssignmentPrecedence"
 - "Bool"
@@ -97,8 +112,10 @@ depends-top-level:
 - "Character"
 - "Double"
 - "ExtendedGraphemeClusterType"
+- "Fish"
 - "Float"
 - "FloatLiteralType"
+- "Human"
 - "Int"
 - "IntegerLiteralType"
 - "Person"
@@ -117,6 +134,7 @@ depends-top-level:
 - "carBrands"
 - "carType"
 - "closedRange"
+- "cong"
 - "contacts"
 - "dict"
 - "dictionary"
@@ -130,6 +148,7 @@ depends-top-level:
 - "emptyFloats"
 - "emptyInts"
 - "evenNUmbers"
+- "findNemo"
 - "floatNum"
 - "forcedString"
 - "fruits"
@@ -139,10 +158,13 @@ depends-top-level:
 - "implicitString"
 - "intExplicitNumber"
 - "intNum"
+- "jack"
 - "letterExplicit"
 - "myState"
 - "myStructure"
 - "names"
+- "neighbours"
+- "nemo"
 - "numbers"
 - "optionalCar"
 - "person"
@@ -186,6 +208,13 @@ depends-member:
 - ["11Assignment17AirportO", "munich"]
 - ["11Assignment17AirportO", "rawValue"]
 - ["11Assignment17AirportO", "sanFran"]
+- ["11Assignment16AnimalC", "String"]
+- ["11Assignment16AnimalC", ""]
+- ["11Assignment16AnimalC", "breatheUnderWater"]
+- ["11Assignment16AnimalC", "code"]
+- ["11Assignment16AnimalC", "init"]
+- ["11Assignment16AnimalC", "name"]
+- !private ["11Assignment16AnimalC", "print"]
 - ["Sa", "append"]
 - ["Sa", "contains"]
 - ["Sa", "count"]
@@ -395,6 +424,9 @@ depends-member:
 - ["s25ExpressibleByArrayLiteralP", "subscript"]
 - ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["11Assignment14FishC", "breatheUnderWater"]
+- ["11Assignment14FishC", "init"]
+- !private ["11Assignment14FishC", "print"]
 - ["s17FixedWidthIntegerP", "init"]
 - ["SH", "=="]
 - ["SH", "RawValue"]
@@ -419,6 +451,9 @@ depends-member:
 - ["SH", "removeLast"]
 - ["SH", "removeSubrange"]
 - ["SH", "subscript"]
+- ["11Assignment15HumanC", "code"]
+- ["11Assignment15HumanC", "init"]
+- !private ["11Assignment15HumanC", "print"]
 - ["Si", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
@@ -615,6 +650,7 @@ depends-nominal:
 - "s18AdditiveArithmeticP"
 - "11Assignment18AircraftC"
 - "11Assignment17AirportO"
+- "11Assignment16AnimalC"
 - "Sa"
 - "SK"
 - "Sz"
@@ -635,8 +671,10 @@ depends-nominal:
 - "s25ExpressibleByArrayLiteralP"
 - "s30ExpressibleByDictionaryLiteralP"
 - "s27ExpressibleByIntegerLiteralP"
+- "11Assignment14FishC"
 - "s17FixedWidthIntegerP"
 - "SH"
+- "11Assignment15HumanC"
 - "Si"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
@@ -1954,4 +1992,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3ddfdd1e585dbd4c8d1fad200dd2d610"
+interface-hash: "0cc3d8b46e92479fba8eee0432fe7421"

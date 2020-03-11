@@ -1,5 +1,5 @@
 version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
 options: "c58b6a51f98cb7328d62a70e35053c1c"
-build_time: [1583870818, 545434000]
+build_time: [1583896676, 60793000]
 inputs:
-  "/Users/congle/Documents/Swift-syntax/Assignment1/main.swift": [1583870817, 369200246]
+  "/Users/congle/Documents/Swift-syntax/Assignment1/main.swift": [1583896674, 167600948]

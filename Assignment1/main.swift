@@ -542,7 +542,7 @@ for i in closedRange {
 
 // Difference between Instance Property vs Type Property and Instance Method vs Type Method
 // we only need to use keyword "static" to turn a Instance Properties/Methods into Type Properties/Methods
-// We can apply these concepts in both struct and class 
+// We can apply these concepts in both struct and class
 struct Structure {
     let instanceProperty = "An Instance Property"
     static let typeProperty = "A Type Property"
@@ -564,3 +564,68 @@ myStructure.instanceMethod()
 // just call the Type Property using dot operator
 print(Structure.typeProperty)
 Structure.typeMethod()
+
+
+//MARK: - TYPE CASTING
+// as as? as! is
+
+class Animal {
+    var name: String
+    
+    init(n: String){
+        name = n
+    }
+}
+
+// subclass Human from super-class Animal
+class Human: Animal {
+    func code() {
+        print("Typing away...")
+    }
+}
+// similarly, Fish class is inheritent from class Animal
+class Fish: Animal {
+    func breatheUnderWater() {
+        print("Breathing unfer water.")
+    }
+}
+
+
+let cong = Human(n: "Cong Le")
+let jack = Human(n: "Jack Bauer")
+let nemo = Fish(n: "Nemo")
+// since these object are inherited from the same superclass, they can be fited in the same array
+let neighbours = [cong, jack, nemo]
+
+// The keyword "is" is used for Type Checking, aka let us check an object against a specific data type
+if neighbours[0] is Human {
+    print("First neighbour is a Human, and his name is \(neighbours[0].name)")
+}
+
+// The keyword "as!" used for Forced DownCast when we want to get methods/properties from subclass and we know for sure the subclass exists
+func findNemo(from animals: [Animal]) {
+    for animal in animals {
+        if animal is Fish { // perform Type Checking first, then
+            print(animal.name)
+            // downcast the super class Animal to Fish class
+            let fish = animal as! Fish
+            // now, call the method inside Fish class
+            fish.breatheUnderWater()
+            
+            // The keyword "as" is used to Upcast , aka to raise a subclass to its super-class
+            let animalFish = fish as Animal
+            print("I am a superclass Animal and my name is \(animalFish.name)")
+        }
+    }
+}
+
+findNemo(from: neighbours)
+
+// The keyword "as?" is used of we not sure the data type, aka safely downcast the data type
+// then, use optional chaining to get the method
+if let fish = neighbours[1] as? Fish {
+    fish.breatheUnderWater()
+} else {
+    print("Casting has failed.")
+}
+
